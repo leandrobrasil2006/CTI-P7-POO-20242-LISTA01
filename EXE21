@@ -1,0 +1,29 @@
+package br.edu.principal;
+import java.util.Scanner;
+public class principal {
+
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        double z, x, y;
+        
+        System.out.print("Insira o tamanho dessa escada (em metros): ");
+        z = scanner.nextDouble();
+     
+        System.out.print("Insira a altura que voce desejaria colocar o quadro (em metros): ");
+        x = scanner.nextDouble();
+        
+        if (z <= x) {
+            System.out.println("Erro:  tamanho dessa escada devera ser maior que a altura que foi desejada.");
+        } else {
+          
+            y = Math.sqrt(z * z - x * x );
+            
+            System.out.printf("A escada devera estar a %.2f metros da parede.%n", y);
+        }
+      
+        scanner.close();
+
+	}
+
+}

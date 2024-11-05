@@ -1,0 +1,25 @@
+package br.edu.principal;
+import java.util.Scanner;
+public class principal {
+
+	public static void main(String[] args) {
+		 Scanner scanner = new Scanner(System.in);
+
+	        double Angulo, Altura, Escada, Radiano;
+	        System.out.print("Insira o ângulo em graus: ");
+	        Angulo = scanner.nextDouble();
+	        
+	        System.out.print("Insira a altura dessa parede (com metros): ");
+	        Altura = scanner.nextDouble();
+
+	        Radiano = Math.toRadians(Angulo);
+
+	        Escada = Altura / Math.sin(Radiano);
+
+	        System.out.printf("O comprimento dessa escada é: %.2f metros%n", Escada);
+	        scanner.close();
+
+	}
+
+}
+

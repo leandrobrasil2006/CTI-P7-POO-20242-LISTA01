@@ -1,0 +1,31 @@
+package br.edu.principal;
+import java.util.Scanner;
+public class principal {
+
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double Salario_Minimo, quilowatts, Valor_do_Quilowatt, Valor_Totalizado, Valor_desconto, Desconto;
+        
+        System.out.print("Insira o salário mínimo: ");
+        Salario_Minimo = scanner.nextDouble();
+        
+        System.out.print("Insira a quantidade de quilowatts : ");
+        quilowatts = scanner.nextDouble();
+        
+        Valor_do_Quilowatt = Salario_Minimo / 5;
+        
+        Valor_Totalizado = Valor_do_Quilowatt * quilowatts;
+        
+        Desconto = Valor_Totalizado * 0.15  ;
+        
+        Valor_desconto = Valor_Totalizado - Desconto;
+     
+        System.out.printf("Valor por cada quilowatt: R$ %.2f%n", Valor_do_Quilowatt);
+        System.out.printf("Valor que vai ser pago pelo imovel: R$ %.2f%n", Valor_Totalizado);
+        System.out.printf("Valor pago com o desconto de 15%%: R$ %.2f%n", Valor_desconto);
+        
+        scanner.close();
+
+	}
+
+}
